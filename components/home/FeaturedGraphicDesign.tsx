@@ -25,54 +25,6 @@ export default function FeaturedGraphicDesign({ data }: Props) {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  // const projects: Project[] = [
-  //   {
-  //     id: "1",
-  //     slug: "brand-identity-tech",
-  //     name: "Tech Startup Brand Identity",
-  //     description: "Complete brand identity with logo and guidelines",
-  //     image:
-  //       "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=300&fit=crop",
-  //     badge: "Featured",
-  //     popular: true,
-  //     designTools: ["Figma", "Illustrator"],
-  //     projectType: "Brand Identity",
-  //   },
-  //   {
-  //     id: "2",
-  //     slug: "social-media-graphics",
-  //     name: "Social Media Campaign",
-  //     description: "30-day social media graphics package",
-  //     image:
-  //       "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=400&h=300&fit=crop",
-  //     badge: "Popular",
-  //     popular: true,
-  //     designTools: ["Photoshop", "Canva"],
-  //     projectType: "Social Media",
-  //   },
-  //   {
-  //     id: "3",
-  //     slug: "restaurant-menu",
-  //     name: "Restaurant Menu Design",
-  //     description: "Elegant menu design with print-ready files",
-  //     image:
-  //       "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop",
-  //     designTools: ["InDesign", "Photoshop"],
-  //     projectType: "Print Design",
-  //   },
-  //   {
-  //     id: "4",
-  //     slug: "product-packaging",
-  //     name: "Product Packaging",
-  //     description: "Custom packaging design for e-commerce brand",
-  //     image:
-  //       "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=400&h=300&fit=crop",
-  //     badge: "New",
-  //     designTools: ["Illustrator", "Photoshop"],
-  //     projectType: "Packaging",
-  //   },
-  // ];
-
   const projects = data || [];
 
   const scrollAmount = 350; // adjust based on card width + gap
@@ -112,7 +64,7 @@ export default function FeaturedGraphicDesign({ data }: Props) {
   }
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-10 bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">

@@ -1,220 +1,256 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   ChevronDown,
   Search,
   HelpCircle,
   Code,
   Palette,
-  Video,
-  PenTool,
-  FileText,
-  Share2,
+  Sparkles,
+  Smartphone,
+  Zap,
+  Bot,
   DollarSign,
   Clock,
-  Users,
   MessageCircle,
   Mail,
   Phone,
+  Briefcase,
+  Users,
 } from "lucide-react";
 
 export default function FAQPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
   const [openFAQ, setOpenFAQ] = useState<number | null>(0);
+  const faqRef = useRef<HTMLDivElement | null>(null);
 
   const categories = [
     { id: "all", name: "All Questions", icon: HelpCircle },
     { id: "web-dev", name: "Web Development", icon: Code },
     { id: "design", name: "Graphic Design", icon: Palette },
-    { id: "video", name: "Video Editing", icon: Video },
-    { id: "copy", name: "Copywriting", icon: PenTool },
-    { id: "content", name: "Content", icon: FileText },
-    { id: "social", name: "Social Media", icon: Share2 },
+    { id: "ai-automation", name: "AI Automation", icon: Sparkles },
+    { id: "mobile", name: "Mobile App Dev", icon: Smartphone },
+    { id: "vibe-coding", name: "Vibe Coding", icon: Zap },
+    { id: "ai-agents", name: "AI Agent Building", icon: Bot },
     { id: "pricing", name: "Pricing & Payment", icon: DollarSign },
     { id: "process", name: "Process", icon: Clock },
   ];
 
   const faqs = [
+    // ── Web Development ──────────────────────────────────────
     {
       category: "web-dev",
       question: "What technologies do you use for web development?",
       answer:
-        "We primarily use modern tech stacks including Next.js, React, TypeScript, Tailwind CSS, Node.js, and various databases like PostgreSQL and MongoDB. We choose technologies based on your project requirements to ensure optimal performance and scalability.",
+        "We build primarily with Next.js, TypeScript, Tailwind CSS, and Supabase or PostgreSQL on the backend. For admin systems and dashboards we use ShadCN UI, Prisma, and Zod. Every stack decision is made based on your project's scale and requirements.",
     },
     {
       category: "web-dev",
-      question: "How long does it take to build a website?",
+      question: "How long does it take to build a web application?",
       answer:
-        "Timeline varies based on complexity. A basic website takes 2-4 weeks, while a complex web application can take 2-3 months. We provide a detailed timeline during the project kickoff and keep you updated throughout the development process.",
+        "A standard marketing site or landing page takes 1–2 weeks. A full web application — with authentication, dashboards, and a database — typically takes 4–8 weeks depending on complexity. We provide a detailed timeline before we start.",
     },
     {
       category: "web-dev",
-      question: "Do you provide website maintenance and support?",
+      question: "Do you build admin panels and CMS systems?",
       answer:
-        "Yes! We offer ongoing maintenance packages that include updates, security patches, backups, and technical support. We can also provide training for your team to manage content independently.",
+        "Yes. We regularly build custom admin dashboards, content management systems, and kiosk interfaces. These include features like role-based access, data tables, form builders, and analytics — all tailored to your workflow.",
     },
     {
       category: "web-dev",
-      question: "Will my website be mobile-friendly?",
+      question: "Will my web app be mobile-responsive?",
       answer:
-        "Absolutely. All our websites are built with a mobile-first approach and are fully responsive across all devices. We test on various screen sizes to ensure perfect functionality and user experience.",
+        "Always. We build mobile-first by default. Every interface is tested across screen sizes and devices to ensure a seamless experience whether your users are on desktop, tablet, or phone.",
     },
+
+    // ── Graphic Design ───────────────────────────────────────
     {
       category: "design",
       question: "What graphic design services do you offer?",
       answer:
-        "We offer comprehensive design services including logo design, brand identity, business cards, brochures, social media graphics, packaging design, infographics, and more. Each project is custom-tailored to your brand.",
+        "We cover the full design spectrum — logo and brand identity, UI/UX design, social media graphics, pitch decks, print materials, product photography editing, and game UI kits. Every project is custom and on-brand.",
     },
     {
       category: "design",
       question: "How many design concepts will I receive?",
       answer:
-        "For logo design, we typically provide 3 initial concepts. For other projects, we start with 2-3 concepts. You'll have opportunities for revisions to refine your chosen direction until you're completely satisfied.",
+        "For brand identity and logo projects we deliver 3 initial concepts. For UI design and other projects we start with 2 directions. You'll go through revision rounds until you're completely satisfied with the result.",
     },
     {
       category: "design",
       question: "What file formats will I receive?",
       answer:
-        "You'll receive all source files (AI, PSD, or Figma) plus ready-to-use formats like PNG, JPG, SVG, and PDF. For print projects, we provide print-ready files with appropriate color profiles and specifications.",
+        "You'll get all source files — Figma, AI, or PSD — plus export-ready formats like PNG, JPG, SVG, and PDF. Print projects include print-ready files with correct color profiles and bleed settings.",
     },
     {
       category: "design",
-      question: "Can you match my existing brand guidelines?",
+      question: "Can you design within my existing brand guidelines?",
       answer:
-        "Yes! We can work within your existing brand guidelines or help you create new ones. If you have a brand style guide, we'll ensure all designs are consistent with your established visual identity.",
+        "Absolutely. If you have a brand style guide we'll work within it precisely. If you don't have one yet, we can build a full brand identity system from scratch as part of the project.",
+    },
+
+    // ── AI Automation ────────────────────────────────────────
+    {
+      category: "ai-automation",
+      question: "What kinds of workflows can you automate with AI?",
+      answer:
+        "We automate a wide range — customer support, lead qualification, invoice processing, email marketing, content generation, social media scheduling, recruitment screening, and competitor price monitoring. If it's repetitive, we can automate it.",
     },
     {
-      category: "video",
-      question: "What types of videos do you produce?",
+      category: "ai-automation",
+      question: "What tools and platforms do you use for automation?",
       answer:
-        "We produce promotional videos, social media content, product demos, corporate videos, testimonial videos, event coverage, explainer videos, and more. We handle everything from filming to final editing.",
+        "We build with n8n, Zapier, Make, and custom Python pipelines depending on your needs. On the AI side we use GPT-4, Claude, LangChain, and OpenAI APIs. We recommend the best stack for your use case and budget.",
     },
     {
-      category: "video",
-      question: "Do you provide video shooting services or just editing?",
+      category: "ai-automation",
+      question: "Which platforms can your automations integrate with?",
       answer:
-        "We offer both! We can handle complete video production from concept to delivery, or we can edit footage you've already captured. Our team includes videographers, editors, and motion graphics specialists.",
+        "We integrate with virtually any platform that has an API — Slack, Gmail, HubSpot, Notion, Airtable, WhatsApp, Mailchimp, QuickBooks, Google Sheets, WordPress, WooCommerce, and many more.",
     },
     {
-      category: "video",
-      question: "How many revisions are included?",
+      category: "ai-automation",
+      question: "How do you measure the success of an automation?",
       answer:
-        "Most packages include 2 rounds of revisions. We work closely with you during the editing process to ensure the final product matches your vision. Additional revisions can be accommodated if needed.",
+        "We define success metrics upfront — time saved, ticket reduction, response rate, error rate, etc. You'll receive performance reports and we'll iterate on the automation to continuously improve its output.",
+    },
+
+    // ── Mobile App Development ───────────────────────────────
+    {
+      category: "mobile",
+      question: "Do you build for iOS, Android, or both?",
+      answer:
+        "Both. We build cross-platform apps using React Native and Flutter, so your app works on iOS and Android from a single codebase. For projects requiring native-specific features, we can build platform-specific solutions.",
     },
     {
-      category: "video",
-      question: "What's the turnaround time for video projects?",
+      category: "mobile",
+      question:
+        "Can you build apps with real-time features like tracking or chat?",
       answer:
-        "For editing-only projects, typically 5-10 business days. Full production projects take 3-4 weeks depending on complexity. Rush delivery is available for an additional fee.",
+        "Yes. We build real-time features using Socket.io, Firebase, and WebRTC. This covers live location tracking, in-app chat, push notifications, live order updates, and video consultations.",
     },
     {
-      category: "copy",
-      question: "What copywriting services do you provide?",
+      category: "mobile",
+      question: "Do you handle app store submission?",
       answer:
-        "We write website copy, landing pages, email campaigns, sales letters, product descriptions, ad copy, blog posts, and more. All copy is SEO-optimized and conversion-focused.",
+        "Yes. We handle the full submission process for both the Apple App Store and Google Play Store, including screenshots, metadata, compliance checks, and responding to review feedback.",
     },
     {
-      category: "copy",
-      question: "Do you conduct research for copywriting projects?",
+      category: "mobile",
+      question: "Can you integrate payment systems into a mobile app?",
       answer:
-        "Yes! We research your industry, competitors, and target audience to create copy that resonates. We'll also review any existing brand materials and interview your team if needed.",
+        "Absolutely. We integrate Paystack, Stripe, Flutterwave, and other payment gateways — including in-app purchases, subscriptions, and wallet systems — depending on your market and use case.",
+    },
+
+    // ── Vibe Coding ──────────────────────────────────────────
+    {
+      category: "vibe-coding",
+      question: "What exactly is Vibe Coding?",
+      answer:
+        "Vibe Coding is AI-assisted rapid development — using tools like Cursor, v0, Bolt.new, and Claude to build production-ready applications significantly faster than traditional development. You get the same quality in a fraction of the time.",
     },
     {
-      category: "copy",
-      question: "Will the copy be SEO-optimized?",
+      category: "vibe-coding",
+      question: "How fast can you ship a project using Vibe Coding?",
       answer:
-        "Absolutely. We incorporate keyword research and SEO best practices into all website and blog content. We balance search optimization with compelling, natural-sounding copy that converts.",
+        "A landing page can be live in hours. An MVP with authentication, a database, and a dashboard can be shipped in 1–3 days. Full e-commerce stores or SaaS platforms in under a week. Speed depends on scope, not on cutting corners.",
     },
     {
-      category: "content",
-      question: "What's included in content creation services?",
+      category: "vibe-coding",
+      question: "Is the code quality production-ready?",
       answer:
-        "Content creation includes blog posts, articles, white papers, case studies, e-books, newsletters, and more. We handle research, writing, editing, and can include custom graphics or images.",
+        "Yes. Every project goes through a quality review — the code is clean, typed (TypeScript), and maintainable. We don't ship AI-generated spaghetti. You get readable, well-structured code you or any developer can build on.",
     },
     {
-      category: "content",
-      question: "How often will you publish content?",
+      category: "vibe-coding",
+      question: "What can I build with Vibe Coding?",
       answer:
-        "We offer flexible publishing schedules from weekly to monthly, depending on your needs and budget. We create content calendars and can manage the entire publishing process for you.",
+        "Anything from landing pages and portfolios to SaaS dashboards, CRM tools, job boards, chat interfaces, and e-commerce stores. If it's a web application, we can build it fast.",
+    },
+
+    // ── AI Agent Building ────────────────────────────────────
+    {
+      category: "ai-agents",
+      question: "What is an AI agent and how is it different from a chatbot?",
+      answer:
+        "A chatbot responds to questions. An AI agent takes actions — it can browse the web, run queries, send emails, create documents, and complete multi-step tasks autonomously. It's the difference between answering and doing.",
     },
     {
-      category: "content",
-      question: "Do you handle content strategy?",
+      category: "ai-agents",
+      question: "What frameworks do you use to build AI agents?",
       answer:
-        "Yes! We develop comprehensive content strategies aligned with your business goals, including topic research, keyword planning, content calendars, and performance tracking.",
+        "We build with LangChain, LangGraph, CrewAI, and AutoGen depending on the complexity and use case. For backend infrastructure we use Python with FastAPI, Redis for task queuing, and PostgreSQL or Supabase for data.",
     },
     {
-      category: "social",
-      question: "Which social media platforms do you manage?",
+      category: "ai-agents",
+      question: "What AI models do your agents run on?",
       answer:
-        "We manage all major platforms including Facebook, Instagram, Twitter, LinkedIn, TikTok, Pinterest, and YouTube. We recommend platforms based on where your target audience is most active.",
+        "We use GPT-4, Claude 3.5 Sonnet, Gemini Pro, and Whisper depending on the task. For document processing we also use GPT-4 Vision and Tesseract OCR. We recommend the right model based on accuracy, cost, and speed requirements.",
     },
     {
-      category: "social",
-      question: "Do you create the social media content?",
+      category: "ai-agents",
+      question: "Can agents integrate with our existing tools and systems?",
       answer:
-        "Yes! Our service includes content creation (graphics, videos, captions), scheduling, community management, engagement, and monthly analytics reports. Everything is handled for you.",
+        "Yes. Agents can connect to Slack, Gmail, Notion, GitHub, Jira, HubSpot, databases, internal APIs, and more. If it has an API or webhook, the agent can interact with it.",
     },
-    {
-      category: "social",
-      question: "How do you measure social media success?",
-      answer:
-        "We track metrics like engagement rate, reach, follower growth, website traffic, and conversions. You'll receive monthly reports with insights and recommendations for continuous improvement.",
-    },
+
+    // ── Pricing ──────────────────────────────────────────────
     {
       category: "pricing",
       question: "How much do your services cost?",
       answer:
-        "Pricing varies by project scope and complexity. Web development starts at $3,000, design projects from $500, and monthly retainers from $1,500. Contact us for a custom quote tailored to your needs.",
+        "Pricing depends on scope and complexity. Web applications start from $1,500, graphic design projects from $300, AI automation builds from $800, mobile apps from $3,000, Vibe Coding MVPs from $500, and AI agent builds from $1,200. Contact us for a custom quote.",
     },
     {
       category: "pricing",
       question: "Do you offer package deals or discounts?",
       answer:
-        "Yes! We offer bundled packages for multiple services and provide discounts for long-term contracts. We're happy to create a custom package that fits your budget and needs.",
+        "Yes. We offer bundled packages when you combine multiple services — for example, a web app plus branding, or an AI automation stack plus an agent. Long-term retainer agreements also come with discounted rates.",
     },
     {
       category: "pricing",
       question: "What payment methods do you accept?",
       answer:
-        "We accept bank transfers, credit cards, PayPal, and other major payment methods. For larger projects, we typically require a 50% deposit upfront with the balance due upon completion.",
+        "We accept bank transfers, Paystack, Flutterwave, and PayPal. For international clients we also accept Wise. Larger projects require a 50% deposit upfront with the balance on delivery.",
     },
     {
       category: "pricing",
       question: "Do you offer payment plans?",
       answer:
-        "Yes, for projects over $5,000, we can arrange milestone-based payment plans. This allows you to spread payments over the project timeline, making larger investments more manageable.",
+        "Yes, for projects above $2,000 we can set up milestone-based payment plans tied to delivery stages. This makes larger investments easier to manage without delaying the project.",
+    },
+
+    // ── Process ──────────────────────────────────────────────
+    {
+      category: "process",
+      question: "What does your project process look like?",
+      answer:
+        "We follow a clear process: Discovery call → Proposal & contract → Design/build → Review & revisions → Final delivery → Post-launch support. You'll have a point of contact and regular updates at every stage.",
     },
     {
       category: "process",
-      question: "What's your project process like?",
+      question: "How involved do I need to be during the project?",
       answer:
-        "We follow a structured process: Discovery call → Proposal & contract → Design/development → Revisions → Final delivery → Support. You'll have a dedicated project manager and regular updates throughout.",
-    },
-    {
-      category: "process",
-      question: "How involved will I need to be?",
-      answer:
-        "We handle the heavy lifting, but your input is crucial at key milestones. Expect initial meetings to discuss goals, feedback sessions during development, and final approval. We make it as easy as possible.",
+        "We handle the heavy lifting. We need your input at the start (goals, brand, requirements), during key review checkpoints, and for final approval. Outside of that, we keep you updated without demanding your time.",
     },
     {
       category: "process",
       question: "What do you need from me to get started?",
       answer:
-        "We'll need information about your business, goals, target audience, brand assets (if available), and any specific requirements. We'll guide you through what's needed during our initial consultation.",
+        "A brief on your goals and target audience, any existing brand assets, and access to relevant platforms or APIs. We'll send a structured onboarding questionnaire to guide you through exactly what we need.",
     },
     {
       category: "process",
       question: "Can you work with tight deadlines?",
       answer:
-        "We can accommodate rush projects when possible, though this may incur additional fees. Contact us with your timeline and we'll let you know if we can meet your deadline without compromising quality.",
+        "Yes — especially for Vibe Coding and AI automation projects where speed is our strength. Rush delivery is available for other services too. Tell us your deadline and we'll be straight with you about whether we can hit it.",
     },
     {
       category: "process",
       question: "Do you sign NDAs?",
       answer:
-        "Absolutely. We understand the importance of confidentiality and are happy to sign NDAs before discussing your project. We take data security and privacy very seriously.",
+        "Absolutely. We sign NDAs before discussing sensitive project details. Confidentiality is standard practice for us — your ideas, data, and business information stay private.",
     },
   ];
 
@@ -225,7 +261,6 @@ export default function FAQPage() {
       searchQuery === "" ||
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
-
     return matchesCategory && matchesSearch;
   });
 
@@ -239,15 +274,11 @@ export default function FAQPage() {
       <section className="relative bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute transform rotate-45 -top-10 -right-10 w-40 h-40 bg-white rounded-full"></div>
-          <div className="absolute transform -rotate-45 top-20 -left-10 w-32 h-32 bg-white rounded-full"></div>
+          {/* <div className="absolute transform -rotate-45 top-20 -left-10 w-32 h-32 bg-white rounded-full"></div> */}
           <div className="absolute transform rotate-12 bottom-10 right-20 w-24 h-24 bg-white rounded-full"></div>
         </div>
-
         <div className="container mx-auto px-4 py-20 relative">
           <div className="max-w-4xl mx-auto text-center">
-            {/* <span className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-4">
-              ❓ Help Center
-            </span> */}
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
               Frequently Asked
               <span className="block text-yellow-300">Questions</span>
@@ -256,8 +287,6 @@ export default function FAQPage() {
               Find answers to common questions about our services, process, and
               pricing
             </p>
-
-            {/* Search Bar */}
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
@@ -281,7 +310,22 @@ export default function FAQPage() {
               return (
                 <button
                   key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
+                  // onClick={() => setActiveCategory(cat.id)}
+                  onClick={() => {
+                    setActiveCategory(cat.id);
+
+                    const yOffset = -220; // adjust based on your sticky height
+                    const element = faqRef.current;
+
+                    if (element) {
+                      const y =
+                        element.getBoundingClientRect().top +
+                        window.pageYOffset +
+                        yOffset;
+
+                      window.scrollTo({ top: y, behavior: "smooth" });
+                    }
+                  }}
                   className={`flex items-center gap-2 px-4 py-2 rounded-full whitespace-nowrap font-medium transition-all flex-shrink-0 ${
                     activeCategory === cat.id
                       ? "bg-cyan-600 text-white shadow-lg"
@@ -298,10 +342,9 @@ export default function FAQPage() {
       </section>
 
       {/* FAQ List */}
-      <section className="py-16">
+      <section ref={faqRef} className="py-16 pt-10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* Results Count */}
             <div className="mb-8">
               <p className="text-gray-600">
                 Showing{" "}
@@ -321,7 +364,6 @@ export default function FAQPage() {
               </p>
             </div>
 
-            {/* No Results */}
             {filteredFAQs.length === 0 && (
               <div className="text-center py-16">
                 <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -345,7 +387,6 @@ export default function FAQPage() {
               </div>
             )}
 
-            {/* FAQ Accordion */}
             <div className="space-y-4">
               {filteredFAQs.map((faq, index) => (
                 <div
@@ -370,7 +411,6 @@ export default function FAQPage() {
                       }`}
                     />
                   </button>
-
                   {openFAQ === index && (
                     <div className="px-6 pb-5">
                       <div className="pt-4 border-t border-gray-200">
@@ -398,29 +438,26 @@ export default function FAQPage() {
                 Can't find what you're looking for? Our team is here to help you
                 with any questions about our services.
               </p>
-
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
                 <a
                   href="/contact"
-                  className="bg-white hover:bg-cyan-50 text-cyan-600 p-6 rounded-xl transition-colors group"
+                  className="bg-white hover:bg-cyan-50 text-cyan-600 p-6 rounded-xl transition-colors"
                 >
                   <Mail className="w-8 h-8 mx-auto mb-3" />
                   <h3 className="font-bold mb-1">Email Us</h3>
                   <p className="text-sm text-gray-600">Send us a message</p>
                 </a>
-
                 <a
                   href="tel:+2347065866656"
-                  className="bg-white hover:bg-cyan-50 text-cyan-600 p-6 rounded-xl transition-colors group"
+                  className="bg-white hover:bg-cyan-50 text-cyan-600 p-6 rounded-xl transition-colors"
                 >
                   <Phone className="w-8 h-8 mx-auto mb-3" />
                   <h3 className="font-bold mb-1">Call Us</h3>
                   <p className="text-sm text-gray-600">+234 706 586-6656</p>
                 </a>
-
                 <a
                   href="/contact"
-                  className="bg-white hover:bg-cyan-50 text-cyan-600 p-6 rounded-xl transition-colors group"
+                  className="bg-white hover:bg-cyan-50 text-cyan-600 p-6 rounded-xl transition-colors"
                 >
                   <MessageCircle className="w-8 h-8 mx-auto mb-3" />
                   <h3 className="font-bold mb-1">Live Chat</h3>
@@ -433,42 +470,51 @@ export default function FAQPage() {
       </section>
 
       {/* Quick Links */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-8 pb-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl font-bold text-gray-800 mb-6 text-center">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
               Popular Resources
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <a
                 href="/services"
-                className="bg-white p-4 rounded-xl text-center hover:shadow-lg transition-shadow"
+                className="group bg-white p-4 rounded-xl text-center border border-cyan-500 hover:bg-cyan-500 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
-                <div className="text-2xl mb-2">🎨</div>
-                <p className="font-semibold text-gray-800 text-sm">
+                <Palette className="w-7 h-7 mx-auto mb-2 text-cyan-600 group-hover:text-white transition-colors duration-300" />
+                <p className="font-semibold text-cyan-600 text-sm group-hover:text-white transition-colors duration-300">
                   Our Services
                 </p>
               </a>
+
               <a
                 href="/portfolio"
-                className="bg-white p-4 rounded-xl text-center hover:shadow-lg transition-shadow"
+                className="group bg-white p-4 rounded-xl text-center border border-cyan-500 hover:bg-cyan-500 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
-                <div className="text-2xl mb-2">💼</div>
-                <p className="font-semibold text-gray-800 text-sm">Portfolio</p>
+                <Briefcase className="w-7 h-7 mx-auto mb-2 text-cyan-600 group-hover:text-white transition-colors duration-300" />
+                <p className="font-semibold text-cyan-600 text-sm group-hover:text-white transition-colors duration-300">
+                  Portfolio
+                </p>
               </a>
+
               <a
                 href="/about"
-                className="bg-white p-4 rounded-xl text-center hover:shadow-lg transition-shadow"
+                className="group bg-white p-4 rounded-xl text-center border border-cyan-500 hover:bg-cyan-500 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
-                <div className="text-2xl mb-2">👥</div>
-                <p className="font-semibold text-gray-800 text-sm">About Us</p>
+                <Users className="w-7 h-7 mx-auto mb-2 text-cyan-600 group-hover:text-white transition-colors duration-300" />
+                <p className="font-semibold text-cyan-600 text-sm group-hover:text-white transition-colors duration-300">
+                  About Us
+                </p>
               </a>
+
               <a
                 href="/contact"
-                className="bg-white p-4 rounded-xl text-center hover:shadow-lg transition-shadow"
+                className="group bg-white p-4 rounded-xl text-center border border-cyan-500 hover:bg-cyan-500 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
-                <div className="text-2xl mb-2">📞</div>
-                <p className="font-semibold text-gray-800 text-sm">Contact</p>
+                <Phone className="w-7 h-7 mx-auto mb-2 text-cyan-600 group-hover:text-white transition-colors duration-300" />
+                <p className="font-semibold text-cyan-600 text-sm group-hover:text-white transition-colors duration-300">
+                  Contact
+                </p>
               </a>
             </div>
           </div>

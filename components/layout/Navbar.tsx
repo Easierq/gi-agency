@@ -6,8 +6,8 @@ import { useRouter } from "next/navigation";
 //
 import { QuickAccessIcon } from "@/misc/icon";
 import { Logo } from "./logo";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "../ui/button";
+// import { cn } from "@/lib/utils";
+// import { buttonVariants } from "../ui/button";
 
 export const Navbar = () => {
   const router = useRouter();
@@ -47,32 +47,24 @@ export const Navbar = () => {
       slug: "mobile-app-development",
     },
     {
-      name: "Graphics Design",
-      slug: "graphics-design",
+      name: "Vibe Coding",
+      slug: "vibe-coding",
     },
     {
-      name: "Content Creation",
-      slug: "content-creation",
+      name: "Ai Agents",
+      slug: "ai-agents",
     },
     {
       name: "Ai Automation",
       slug: "ai-automation",
     },
     {
-      name: "Sales Copywriting",
-      slug: "sales-copywriting",
-    },
-    {
-      name: "Video Editing",
-      slug: "video-editing",
+      name: "Graphics Design",
+      slug: "graphics-design",
     },
     {
       name: "Web Development",
       slug: "web-development",
-    },
-    {
-      name: "Social Media Management",
-      slug: "social-media-management",
     },
   ];
 
@@ -125,7 +117,7 @@ export const Navbar = () => {
                 <span>FAQs</span>
               </Link>
               <Link
-                href="https://api.whatsapp.com/send?phone=2347048390756"
+                href="https://api.whatsapp.com/send?phone=2347065866656"
                 className="bg-green-600 hover:bg-green-700 text-white flex items-center space-x-1 rounded-lg px-6 py-2 font-medium transition-colors"
               >
                 <span>Work with Us</span>
@@ -262,7 +254,7 @@ export const Navbar = () => {
           </div>
           <div className="sticky bottom-0 inset-x-0 bg-white p-4 shadow-lg flex items-center justify-around pt-4 border-t">
             <Link
-              href="https://api.whatsapp.com/send?phone=2347048390756"
+              href="https://api.whatsapp.com/send?phone=2347065866656"
               onClick={() => setIsMobileMenuOpen(false)}
               className="w-full p-2 text-center bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-bold text-lg transition-colors"
             >

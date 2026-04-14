@@ -1,18 +1,18 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-export const Logo = ({ width = "w-[200px]" }) => {
+export const Logo = ({ width = "w-[120px]" }) => {
   return (
     <Link href="/" className="inline-block">
-      <img src="/logo.png" alt="logo" className={cn("h-auto", width)} />
+      <img src="/gigreen.svg" alt="logo" className={cn("h-auto", width)} />
     </Link>
   );
 };
 
-export const LogoFooter = ({ width = "w-[200px]" }) => {
+export const LogoFooter = ({ width = "w-[120px]" }) => {
   return (
     <Link href="/" className="inline-block">
-      <img src="/logowhite.png" alt="logo" className={cn("h-auto", width)} />
+      <img src="/giwhite.svg" alt="logo" className={cn("h-auto", width)} />
     </Link>
   );
 };

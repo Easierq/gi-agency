@@ -32,63 +32,6 @@ export default function FeaturedMobileApp({ data }: Props) {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  // const projects: Project[] = [
-  //   {
-  //     id: "1",
-  //     slug: "fitness-tracker-app",
-  //     name: "Fitness Tracker Pro",
-  //     description:
-  //       "Comprehensive fitness tracking app with AI-powered workout plans",
-  //     image:
-  //       "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
-  //     badge: "Featured",
-  //     popular: true,
-  //     platforms: ["iOS", "Android"],
-  //     appType: "Health & Fitness",
-  //     downloads: "100K+",
-  //     rating: "4.8/5",
-  //   },
-  //   {
-  //     id: "2",
-  //     slug: "ecommerce-shopping-app",
-  //     name: "ShopEase Mobile",
-  //     description: "Feature-rich e-commerce app with AR try-on capability",
-  //     image:
-  //       "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
-  //     badge: "Popular",
-  //     popular: true,
-  //     platforms: ["iOS", "Android"],
-  //     appType: "E-Commerce",
-  //     downloads: "500K+",
-  //     rating: "4.7/5",
-  //   },
-  //   {
-  //     id: "3",
-  //     slug: "food-delivery-app",
-  //     name: "QuickBite Delivery",
-  //     description: "Fast food delivery app with real-time tracking",
-  //     image:
-  //       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
-  //     platforms: ["iOS", "Android"],
-  //     appType: "Food & Beverage",
-  //     downloads: "250K+",
-  //     rating: "4.6/5",
-  //   },
-  //   {
-  //     id: "4",
-  //     slug: "productivity-planner",
-  //     name: "TaskMaster Pro",
-  //     description: "Advanced task management and productivity app",
-  //     image:
-  //       "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&h=300&fit=crop",
-  //     badge: "New",
-  //     platforms: ["iOS", "Android"],
-  //     appType: "Productivity",
-  //     downloads: "50K+",
-  //     rating: "4.9/5",
-  //   },
-  // ];
-
   const projects = data || [];
 
   const scrollAmount = 350; // width of card + gap
@@ -126,7 +69,7 @@ export default function FeaturedMobileApp({ data }: Props) {
   }
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-10 bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">

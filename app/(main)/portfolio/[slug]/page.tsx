@@ -61,15 +61,19 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             {/* Project Gallery */}
             <ProjectGallery
               images={
-                project.images?.length > 0 ? project.images : [project.image]
+                project.images?.length > 0
+                  ? project.data.images
+                  : [project.data.image]
               }
-              projectName={project.name}
-              badge={project.badge}
-              featured={project.featured}
+              projectName={project.data.name}
+              badge={project.data.badge}
+              featured={project.data.featured}
             />
 
             {/* Video Player (if video exists) */}
-            {project.videoUrl && <VideoPlayer videoUrl={project.videoUrl} />}
+            {project.data.videoUrl && (
+              <VideoPlayer videoUrl={project.data.videoUrl} />
+            )}
           </div>
 
           <ProjectInfo project={project.data} />

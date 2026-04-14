@@ -11,49 +11,21 @@ import {
   ChevronRight,
   Sparkles,
   Smartphone,
+  Zap,
+  Bot,
 } from "lucide-react";
 
 export default function ServiceCategories() {
   const categories = [
     {
-      id: "sales-copywriting",
-      name: "Sales Copywriting",
-      slug: "sales-copywriting",
-      icon: PenTool,
-      serviceCount: 45,
+      id: "web-development",
+      name: "Web Development",
+      slug: "web-development",
+      icon: Code,
+      serviceCount: 50,
       image:
-        "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=300&fit=crop",
-      color: "bg-blue-500",
-    },
-    {
-      id: "content-creation",
-      name: "Content Creation",
-      slug: "content-creation",
-      icon: FileText,
-      serviceCount: 38,
-      image:
-        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop",
-      color: "bg-purple-500",
-    },
-    {
-      id: "social-media-management",
-      name: "Social Media Management",
-      slug: "social-media-management",
-      icon: Share2,
-      serviceCount: 32,
-      image:
-        "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=300&fit=crop",
-      color: "bg-pink-500",
-    },
-    {
-      id: "video-editing",
-      name: "Video Editing",
-      slug: "video-editing",
-      icon: Video,
-      serviceCount: 35,
-      image:
-        "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&h=300&fit=crop",
-      color: "bg-red-500",
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
+      color: "bg-cyan-500",
     },
     {
       id: "graphic-design",
@@ -66,23 +38,14 @@ export default function ServiceCategories() {
       color: "bg-yellow-500",
     },
     {
-      id: "web-development",
-      name: "Web Development",
-      slug: "web-development",
-      icon: Code,
-      serviceCount: 50,
-      image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
-      color: "bg-cyan-500",
-    },
-    {
       id: "ai-automation",
       name: "AI Automation",
       slug: "ai-automation",
       icon: Sparkles,
       serviceCount: 25,
       image:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop",
+        // "https://images.unsplash.com/photo-1545987796-200677ee1011?w=400&h=300&fit=crop",
+        "https://res.cloudinary.com/isiaqofficial/image/upload/v1776131323/eportfolio/n8n_ydur2d.png",
       color: "bg-purple-500",
     },
     {
@@ -94,6 +57,26 @@ export default function ServiceCategories() {
       image:
         "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
       color: "bg-indigo-500",
+    },
+    {
+      id: "vibe-coding",
+      name: "Vibe Coding",
+      slug: "vibe-coding",
+      icon: Zap,
+      serviceCount: 18,
+      image:
+        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop",
+      color: "bg-pink-500",
+    },
+    {
+      id: "ai-agent-building",
+      name: "AI Agent Building",
+      slug: "ai-agent-building",
+      icon: Bot,
+      serviceCount: 15,
+      image:
+        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=300&fit=crop",
+      color: "bg-emerald-500",
     },
   ];
 
@@ -132,7 +115,7 @@ export default function ServiceCategories() {
             Explore Our <span className="text-green-600">Services</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Professional solutions tailored to grow your business
+            Professional solutions tailored for your need and business growth.
           </p>
         </motion.div>
 

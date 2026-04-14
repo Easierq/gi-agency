@@ -121,7 +121,7 @@ export default async function HomePage() {
     getPortfolioData(),
   ]);
 
-  console.log(graphicsData, mobileAppData);
+  // console.log(graphicsData, mobileAppData);
 
   return (
     <div className="bg-white">

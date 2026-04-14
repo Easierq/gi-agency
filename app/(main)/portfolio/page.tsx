@@ -14,7 +14,7 @@ async function fetchProjects() {
 
 async function PortfolioPage() {
   const projects = await fetchProjects();
-  console.log(projects);
+  // console.log(projects);
 
   return <PortfolioCient projects={projects.data} />;
 }

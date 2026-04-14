@@ -19,37 +19,29 @@ export const Footer = () => {
 
   const categories = [
     {
-      name: "Social Media Marketing",
-      slug: "social-media-marketing",
+      name: "Ai Agents",
+      slug: "ai-agents",
     },
     {
       // name: "Social media management",
+      name: "Ai Automation",
+      slug: "ai-automation",
+    },
+    {
       name: "Graphics Design",
       slug: "graphics-design",
     },
     {
-      name: "Content Creation",
-      slug: "content-creation",
+      name: "Mobile Application",
+      slug: "mobile-app-development",
     },
     {
-      name: "Copy Writing",
-      slug: "copy-writing",
-    },
-    {
-      name: "Sales Copywriting",
-      slug: "sales-copywriting",
-    },
-    {
-      name: "Video Editing",
-      slug: "video-editing",
+      name: "Vibe Coding",
+      slug: "vibe-coding",
     },
     {
       name: "Web Development",
       slug: "web-development",
-    },
-    {
-      name: "Social Media Management",
-      slug: "social-media-management",
     },
   ];
 
@@ -73,7 +65,7 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <LogoFooter />
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-gray-400 mb-6 mt-4 leading-relaxed">
               Transform your space with our premium furniture collection.
               Quality craftsmanship meets modern design for your perfect home.
             </p>
@@ -161,7 +153,7 @@ export const Footer = () => {
               {categories.map((category, index) => (
                 <li key={index}>
                   <a
-                    href={`/${category.slug}`}
+                    href={`services/${category.slug}`}
                     className="text-gray-400 hover:text-green-500 transition-colors"
                   >
                     {category.name}
@@ -178,7 +170,7 @@ export const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
                 <span className="text-gray-400">
-                  Festac, Lagos State | Osogbo, Osun State Nigeria
+                  Osogbo, Osun State Nigeria
                 </span>
               </li>
               <li className="flex items-center space-x-3">
@@ -217,7 +209,7 @@ export const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2024 GIAgency. All rights reserved.
+              © 2026 GIAgency. All rights reserved.
             </p>
 
             <div></div>

@@ -363,7 +363,7 @@ export default function FeaturedWebDevelopment({ data }: Props) {
   }
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-10 bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">

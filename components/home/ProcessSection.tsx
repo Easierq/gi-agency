@@ -34,7 +34,7 @@ export default function ProcessSection() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-green-50">
+    <section className="py-12 bg-gradient-to-br from-gray-50 to-green-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
@@ -106,9 +106,12 @@ export default function ProcessSection() {
           <p className="text-xl text-gray-700 mb-6">
             Ready to get started? Let's bring your vision to life!
           </p>
-          <button className="bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-xl">
+          <a
+            href="https://api.whatsapp.com/send?phone=2347065866656"
+            className="bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-xl"
+          >
             Start Your Project
-          </button>
+          </a>
         </div>
       </div>
     </section>

@@ -166,36 +166,36 @@ export default function AboutPage() {
     },
   ];
 
-  const team = [
-    {
-      name: "Alex Rodriguez",
-      role: "Founder & CEO",
-      image: "bg-gradient-to-br from-cyan-400 to-blue-500",
-      bio: "Full-stack developer turned entrepreneur",
-      speciality: "Strategy & Leadership",
-    },
-    {
-      name: "Sarah Chen",
-      role: "Creative Director",
-      image: "bg-gradient-to-br from-purple-400 to-pink-500",
-      bio: "Award-winning designer with 10+ years experience",
-      speciality: "Design & Branding",
-    },
-    {
-      name: "Marcus Johnson",
-      role: "Head of Development",
-      image: "bg-gradient-to-br from-green-400 to-cyan-500",
-      bio: "Tech lead specializing in scalable solutions",
-      speciality: "Web & Mobile Development",
-    },
-    {
-      name: "Emily Davis",
-      role: "Content Strategist",
-      image: "bg-gradient-to-br from-orange-400 to-red-500",
-      bio: "Content marketing expert and storyteller",
-      speciality: "Content & Copywriting",
-    },
-  ];
+  // const team = [
+  //   {
+  //     name: "Alex Rodriguez",
+  //     role: "Founder & CEO",
+  //     image: "bg-gradient-to-br from-cyan-400 to-blue-500",
+  //     bio: "Full-stack developer turned entrepreneur",
+  //     speciality: "Strategy & Leadership",
+  //   },
+  //   {
+  //     name: "Sarah Chen",
+  //     role: "Creative Director",
+  //     image: "bg-gradient-to-br from-purple-400 to-pink-500",
+  //     bio: "Award-winning designer with 10+ years experience",
+  //     speciality: "Design & Branding",
+  //   },
+  //   {
+  //     name: "Marcus Johnson",
+  //     role: "Head of Development",
+  //     image: "bg-gradient-to-br from-green-400 to-cyan-500",
+  //     bio: "Tech lead specializing in scalable solutions",
+  //     speciality: "Web & Mobile Development",
+  //   },
+  //   {
+  //     name: "Emily Davis",
+  //     role: "Content Strategist",
+  //     image: "bg-gradient-to-br from-orange-400 to-red-500",
+  //     bio: "Content marketing expert and storyteller",
+  //     speciality: "Content & Copywriting",
+  //   },
+  // ];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -209,9 +209,6 @@ export default function AboutPage() {
 
         <div className="container mx-auto px-4 py-20 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-4">
-              🚀 About Us
-            </span>
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
               We Create Digital
               <span className="block text-yellow-300">
@@ -274,13 +271,19 @@ export default function AboutPage() {
               </div>
 
               <div className="mt-8 flex flex-wrap gap-4">
-                <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-bold transition-colors flex items-center">
+                <a
+                  href="/services"
+                  className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-bold transition-colors flex items-center"
+                >
                   View Our Work
                   <ChevronRight className="w-5 h-5 ml-2" />
-                </button>
-                <button className="border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-50 px-6 py-3 rounded-lg font-bold transition-colors">
+                </a>
+                <a
+                  href="/contact"
+                  className="border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-50 px-6 py-3 rounded-lg font-bold transition-colors"
+                >
                   Get In Touch
-                </button>
+                </a>
               </div>
             </div>
 
@@ -348,7 +351,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="text-cyan-600 font-bold text-sm uppercase tracking-wide">
@@ -400,7 +403,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Our Values */}
       <section className="py-16 bg-gradient-to-br from-gray-50 to-cyan-50">
@@ -415,7 +418,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-6 max-w-6xl mx-auto">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (

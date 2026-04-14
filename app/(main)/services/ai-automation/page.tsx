@@ -103,7 +103,7 @@ async function fetchProjects(category: string) {
 
 const AIAutomationPage = async () => {
   const projects = await fetchProjects(CATEGORY);
-  console.log(projects);
+  // console.log(projects);
 
   return <AiClient projects={projects.data} categorySlug={CATEGORY} />;
 };

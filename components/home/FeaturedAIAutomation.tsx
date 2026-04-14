@@ -25,60 +25,6 @@ export default function FeaturedAIAutomation({ data }: Props) {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  // const projects: Project[] = [
-  //   {
-  //     id: "1",
-  //     slug: "customer-support-ai",
-  //     name: "AI Customer Support Bot",
-  //     description:
-  //       "Intelligent chatbot handling 10K+ conversations monthly with 95% accuracy",
-  //     image:
-  //       "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop",
-  //     badge: "Featured",
-  //     popular: true,
-  //     aiTechnologies: ["GPT-4", "Langchain", "OpenAI API"],
-  //     automationType: "Customer Support Automation",
-  //     results: "85% reduction in support tickets",
-  //   },
-  //   {
-  //     id: "2",
-  //     slug: "content-generator-ai",
-  //     name: "AI Content Generator",
-  //     description:
-  //       "Automated content creation system for social media and blogs",
-  //     image:
-  //       "https://images.unsplash.com/photo-1676277791608-ac52e8e5be2e?w=400&h=300&fit=crop",
-  //     badge: "Popular",
-  //     popular: true,
-  //     aiTechnologies: ["Claude AI", "GPT-4", "DALL-E"],
-  //     automationType: "Content Automation",
-  //     results: "500+ pieces generated monthly",
-  //   },
-  //   {
-  //     id: "3",
-  //     slug: "data-analysis-pipeline",
-  //     name: "AI Data Analysis Pipeline",
-  //     description: "Automated data processing and insights generation system",
-  //     image:
-  //       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-  //     aiTechnologies: ["Python", "TensorFlow", "Pandas"],
-  //     automationType: "Data Processing",
-  //   },
-  //   {
-  //     id: "4",
-  //     slug: "email-automation-ai",
-  //     name: "AI Email Marketing Automation",
-  //     description:
-  //       "Smart email campaigns with personalization and optimization",
-  //     image:
-  //       "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=300&fit=crop",
-  //     badge: "New",
-  //     aiTechnologies: ["GPT-4", "Mailchimp API", "Zapier"],
-  //     automationType: "Marketing Automation",
-  //     results: "40% increase in open rates",
-  //   },
-  // ];
-
   const projects = data || [];
 
   const scrollAmount = 350;
@@ -114,7 +60,7 @@ export default function FeaturedAIAutomation({ data }: Props) {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-br from-purple-50 to-indigo-50">
+    <section className="py-10 bg-gradient-to-br from-purple-50 to-indigo-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-8">
           <div>

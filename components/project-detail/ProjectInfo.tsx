@@ -291,7 +291,7 @@ export default function ProjectInfo({ project }: ProjectInfoProps) {
 
   const handleShare = (platform: string) => {
     setShowShareMenu(false);
-    console.log(`Sharing to ${platform}`);
+    // console.log(`Sharing to ${platform}`);
   };
 
   const formatDate = (dateString?: string) => {

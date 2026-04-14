@@ -21,6 +21,10 @@ import {
   Twitter,
   Linkedin,
   Github,
+  Sparkles,
+  Smartphone,
+  Zap,
+  Bot,
 } from "lucide-react";
 
 import {
@@ -113,28 +117,28 @@ export default function ContactPage() {
       color: "bg-yellow-50 border-yellow-200",
     },
     {
-      icon: Video,
-      name: "Video Editing",
-      description: "Professional video production",
-      color: "bg-red-50 border-red-200",
-    },
-    {
-      icon: PenTool,
-      name: "Sales Copywriting",
-      description: "Compelling sales copy",
-      color: "bg-blue-50 border-blue-200",
-    },
-    {
-      icon: FileText,
-      name: "Content Creation",
-      description: "Engaging written content",
+      icon: Sparkles,
+      name: "AI Automation",
+      description: "Intelligent workflow automation",
       color: "bg-purple-50 border-purple-200",
     },
     {
-      icon: Share2,
-      name: "Social Media",
-      description: "Social media management",
+      icon: Smartphone,
+      name: "Mobile App Development",
+      description: "Native & cross-platform apps",
+      color: "bg-indigo-50 border-indigo-200",
+    },
+    {
+      icon: Zap,
+      name: "Vibe Coding",
+      description: "AI-assisted rapid development",
       color: "bg-pink-50 border-pink-200",
+    },
+    {
+      icon: Bot,
+      name: "AI Agent Building",
+      description: "Autonomous agents that think & act",
+      color: "bg-emerald-50 border-emerald-200",
     },
   ];
 
@@ -553,7 +557,7 @@ export default function ContactPage() {
               Schedule a free 30-minute consultation call with our team
             </p>
             <a
-              href="https://api.whatsapp.com/send?phone=2347048390756"
+              href="https://api.whatsapp.com/send?phone=2347065866656"
               className="bg-white text-purple-600 hover:bg-purple-50 px-8 py-3 rounded-lg font-bold transition-colors inline-flex items-center justify-center"
             >
               <Calendar className="w-5 h-5 mr-2" />

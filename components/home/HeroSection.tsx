@@ -21,24 +21,23 @@ export default function HeroSection() {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute transform rotate-45 -top-10 -right-10 w-40 h-40 bg-white rounded-full"></div>
-        <div className="absolute transform -rotate-45 top-20 -left-10 w-32 h-32 bg-white rounded-full"></div>
+        {/* <div className="absolute transform -rotate-45 top-20 -left-10 w-32 h-32 bg-white rounded-full"></div> */}
         <div className="absolute transform rotate-12 bottom-10 right-20 w-24 h-24 bg-white rounded-full"></div>
       </div>
 
-      <div className="container mx-auto px-4 py-14 md:py-20 relative">
+      <div className="container mx-auto px-4 py-14 pt-16 md:py-20 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          {/* <div className="text-center lg:text-left"> */}
           <div className="flex flex-col items-center lg:items-start text-center">
-            <span className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-4">
+            {/* <span className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4 inline mr-2" />
               🎉 Transform Your Business{" "}
               <span className="hidden md:inline-block">
                 - Get 5% Off First Project
               </span>
-            </span>
+            </span> */}
 
-            <h1 className="text-4xl sm:text-6xl font-bold mb-4 lg:mb-6 leading-tight">
+            <h1 className="text-[40px] sm:text-6xl font-bold mb-4 lg:mb-6 leading-tight">
               Elevate Your Brand
               <span className="block text-yellow-300">
                 With Expert Services
@@ -46,7 +45,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-xl text-center lg:text-left mb-8 text-green-100 max-w-lg ">
-              From compelling copywriting to stunning web development, we
+              From compelling Ai automations to stunning web development, we
               deliver digital solutions that drive results and grow your
               business.
             </p>
@@ -89,7 +88,7 @@ export default function HeroSection() {
             </div>
 
             {/* Trust Badges */}
-            <div className="hidden lg:hidden flex-wrap justify-center lg:justify-start gap-8 mt-8">
+            {/* <div className="hidden lg:hidden flex-wrap justify-center lg:justify-start gap-8 mt-8">
               <div className="text-center">
                 <div className="text-3xl font-bold mb-1">500+</div>
                 <p className="text-sm text-green-100">Happy Clients</p>
@@ -102,7 +101,7 @@ export default function HeroSection() {
                 <div className="text-3xl font-bold mb-1">4.9★</div>
                 <p className="text-sm text-green-100">Client Rating</p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Content - Featured Visual */}
@@ -119,14 +118,14 @@ export default function HeroSection() {
             </div>
 
             {/* Floating Features */}
-            <div className="absolute top-10 -left-6 bg-white text-green-600 px-4 py-3 rounded-lg shadow-lg transform -rotate-6">
+            <div className="absolute z-20 top-10 -left-6 bg-white text-green-600 px-4 py-3 rounded-lg shadow-lg transform -rotate-6">
               <div className="text-center">
                 <p className="font-bold">Fast Delivery</p>
                 <p className="text-sm">On-Time Projects</p>
               </div>
             </div>
 
-            <div className="absolute bottom-20 -right-6 bg-yellow-400 text-green-800 px-4 py-3 rounded-lg shadow-lg transform rotate-6">
+            <div className="absolute z-20 bottom-20 -right-6 bg-yellow-400 text-green-800 px-4 py-3 rounded-lg shadow-lg transform rotate-6">
               <div className="text-center">
                 <p className="font-bold">100% Satisfaction</p>
                 <p className="text-sm">Money Back Guarantee</p>

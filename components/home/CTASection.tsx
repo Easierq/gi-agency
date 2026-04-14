@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="py-20 pb-40 bg-gradient-to-br from-gray-50 to-green-50">
+    <section className="py-12 pb-32 bg-gradient-to-br from-gray-50 to-green-50">
       <div className="container mx-auto px-4">
         <div className="bg-gradient-to-r from-green-600 via-green-500 to-emerald-500 rounded-xl md:rounded-3xl shadow-2xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
@@ -98,7 +98,7 @@ export default function CTASection() {
 
               <div className="space-y-4 lg:space-y-6">
                 <a
-                  href="tel:+2347048390756"
+                  href="tel:+2347065866656"
                   className="flex items-center gap-4 p-4 lg:p-6 bg-green-50 hover:bg-green-100 rounded-xl transition-colors group border-2 border-green-200"
                 >
                   <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
