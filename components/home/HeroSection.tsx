@@ -28,7 +28,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 py-14 pt-16 md:py-20 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="flex flex-col items-center lg:items-start text-center">
+          <div className="flex flex-col items-center lg:items-start">
             {/* <span className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4 inline mr-2" />
               🎉 Transform Your Business{" "}
@@ -37,7 +37,7 @@ export default function HeroSection() {
               </span>
             </span> */}
 
-            <h1 className="sm:hidden text-5xl sm:text-6xl font-bold mb-4 lg:mb-6 leading-tight">
+            <h1 className="sm:hidden text-5xl sm:text-6xl text-center font-bold mb-4 lg:mb-6 leading-tight">
               We Build It.
               <span className="inline-block text-yellow-300">You Grow</span>
             </h1>
@@ -120,7 +120,7 @@ export default function HeroSection() {
                 alt="Team working"
                 className="w-full h-80 lg:h-96 object-cover rounded-xl shadow-2xl"
               />
-              <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-green-800 px-6 py-3 rounded-full font-bold shadow-lg">
+              <div className="absolute -bottom-4 -right-2 md:-right-4 bg-yellow-400 text-green-800 px-6 py-3 rounded-full font-bold shadow-lg">
                 20% OFF
               </div>
             </div>
