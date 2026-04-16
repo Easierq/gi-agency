@@ -37,17 +37,25 @@ export default function HeroSection() {
               </span>
             </span> */}
 
-            <h1 className="text-[40px] sm:text-6xl font-bold mb-4 lg:mb-6 leading-tight">
+            <h1 className="sm:hidden text-5xl sm:text-6xl font-bold mb-4 lg:mb-6 leading-tight">
+              We Build It.
+              <span className="inline-block text-yellow-300">You Grow</span>
+            </h1>
+            <h1 className="hidden sm:inline-block text-[40px] sm:text-6xl font-bold mb-4 lg:mb-6 leading-tight">
               Elevate Your Brand
               <span className="block text-yellow-300">
                 With Expert Services
               </span>
             </h1>
 
-            <p className="text-xl text-center lg:text-left mb-8 text-green-100 max-w-lg ">
+            <p className="hidden sm:inline-block text-xl text-center lg:text-left mb-8 text-green-100 max-w-lg ">
               From compelling Ai automations to stunning web development, we
               deliver digital solutions that drive results and grow your
               business.
+            </p>
+            <p className="sm:hidden text-lg text-center lg:text-left mb-8 text-green-100 max-w-lg ">
+              We combine expert development, smart AI automation, and world
+              class design to build digital products your users will love.
             </p>
 
             {/* Search Bar */}
@@ -118,14 +126,14 @@ export default function HeroSection() {
             </div>
 
             {/* Floating Features */}
-            <div className="absolute z-20 top-10 -left-6 bg-white text-green-600 px-4 py-3 rounded-lg shadow-lg transform -rotate-6">
+            <div className="hidden md:block absolute z-20 top-10 -left-6 bg-white text-green-600 px-4 py-3 rounded-lg shadow-lg transform -rotate-6">
               <div className="text-center">
                 <p className="font-bold">Fast Delivery</p>
                 <p className="text-sm">On-Time Projects</p>
               </div>
             </div>
 
-            <div className="absolute z-20 bottom-20 -right-6 bg-yellow-400 text-green-800 px-4 py-3 rounded-lg shadow-lg transform rotate-6">
+            <div className="hidden md:block absolute z-20 bottom-20 -right-6 bg-yellow-400 text-green-800 px-4 py-3 rounded-lg shadow-lg transform rotate-6">
               <div className="text-center">
                 <p className="font-bold">100% Satisfaction</p>
                 <p className="text-sm">Money Back Guarantee</p>

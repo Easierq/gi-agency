@@ -188,7 +188,7 @@ export default function FeaturedAIAutomation({ data }: Props) {
         <div className="text-center mt-8 md:hidden">
           <Link
             href="/services/ai-automation"
-            className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
+            className="inline-flex items-center border border-purple-600 text-purple-600 hover:text-purple-700 font-semibold"
           >
             View All AI Automation Projects{" "}
             <ArrowRight className="w-5 h-5 ml-1" />

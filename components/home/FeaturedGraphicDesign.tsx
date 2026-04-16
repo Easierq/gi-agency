@@ -195,7 +195,7 @@ export default function FeaturedGraphicDesign({ data }: Props) {
         <div className="text-center mt-8 md:hidden">
           <Link
             href="/services/graphics-design"
-            className="inline-flex items-center text-yellow-600 hover:text-yellow-700 font-semibold"
+            className="inline-flex items-center border border-yellow-500 text-yellow-600 hover:text-yellow-700 font-semibold"
           >
             View All Design Projects
             <ArrowRight className="w-5 h-5 ml-1" />

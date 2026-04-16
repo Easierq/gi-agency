@@ -220,7 +220,7 @@ export default function FeaturedMobileApp({ data }: Props) {
         <div className="text-center mt-8 md:hidden">
           <Link
             href="/services/mobile-app-development"
-            className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-semibold"
+            className="inline-flex items-center border border-indigo-600 text-indigo-600 hover:text-indigo-700 font-semibold"
           >
             View All Mobile App Projects
             <ArrowRight className="w-5 h-5 ml-1" />

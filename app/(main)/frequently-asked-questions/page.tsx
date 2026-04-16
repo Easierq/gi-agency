@@ -302,7 +302,7 @@ export default function FAQPage() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-4 md:py-8 bg-white border-b border-gray-200 sticky top-20 md:top-32 z-10">
+      <section className="py-4 md:py-8 bg-white border-b border-gray-200 sticky top-16 md:top-32 z-10">
         <div className="container mx-auto px-4">
           <div className="flex overflow-x-auto gap-3 pb-2 hidden-scrollbar">
             {categories.map((cat) => {

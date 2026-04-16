@@ -323,7 +323,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
 
             {/* Category-specific overview sections */}
             {project.results && (
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6 mt-6">
+              <div className="bg-green-50 border border-green-200 rounded-lg p-3 md:p-6 mt-6">
                 <h4 className="font-bold text-green-900 mb-2">
                   Measurable Results
                 </h4>
@@ -332,20 +332,20 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
             )}
 
             {project.videoType && (
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6 mt-6">
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-3 md:p-6 mt-6">
                 <h4 className="font-bold text-purple-900 mb-2">Video Type</h4>
                 <p className="text-purple-700">{project.videoType}</p>
               </div>
             )}
 
             {project.projectType && (
-              <div className="bg-pink-50 border border-pink-200 rounded-lg p-6 mt-6">
+              <div className="bg-pink-50 border border-pink-200 rounded-lg p-3 md:p-6 mt-6">
                 <h4 className="font-bold text-pink-900 mb-2">Design Type</h4>
                 <p className="text-pink-700">{project.projectType}</p>
               </div>
             )}
 
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mt-8">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 md:p-6 mt-8">
               <h4 className="font-bold text-blue-900 mb-2">
                 Interested in a Similar Project?
               </h4>

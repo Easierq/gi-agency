@@ -80,9 +80,7 @@ export default function FeaturedPortfolio({ data }: Props) {
               </div>
               <h2 className="text-3xl font-bold text-gray-800">
                 Our
-                <span className="hidden md:inline-block text-green-600">
-                  Portfolio
-                </span>
+                <span className="text-green-600"> Portfolio</span>
               </h2>
             </div>
             <p className="text-gray-600">Recent projects we worked on.</p>
@@ -204,7 +202,7 @@ export default function FeaturedPortfolio({ data }: Props) {
         <div className="text-center mt-8 md:hidden">
           <Link
             href="/portfolio"
-            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
+            className="inline-flex items-center border border-green-600 text-green-600 hover:text-green-700 font-semibold"
           >
             View All Portfolio Projects
             <ArrowRight className="w-5 h-5 ml-1" />

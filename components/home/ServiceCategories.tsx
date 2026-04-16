@@ -111,7 +111,7 @@ export default function ServiceCategories() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-[32px] md:text-4xl font-bold text-gray-800 mb-4">
             Explore Our <span className="text-green-600">Services</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">

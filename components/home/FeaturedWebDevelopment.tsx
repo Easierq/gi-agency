@@ -500,7 +500,7 @@ export default function FeaturedWebDevelopment({ data }: Props) {
         <div className="text-center mt-8 md:hidden">
           <Link
             href="/services/web-development"
-            className="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-semibold"
+            className="inline-flex items-center border border-cyan-600 text-cyan-600 hover:text-cyan-700 font-semibold"
           >
             View All Web Development Projects
             <ArrowRight className="w-5 h-5 ml-1" />

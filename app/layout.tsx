@@ -18,7 +18,7 @@ import ToastContainer from "@/components/ui/ToastContainer";
 
 export const metadata: Metadata = {
   title: {
-    default: "GIAgency - Creative Digital Solutions",
+    default: "GIAGENCY - Creative Digital Solutions",
     template: "%s | GIAgency",
   },
   description:
