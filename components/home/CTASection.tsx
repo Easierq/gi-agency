@@ -6,7 +6,7 @@ export default function CTASection() {
   return (
     <section className="py-12 pb-32 bg-gradient-to-br from-gray-50 to-green-50">
       <div className="container mx-auto px-4">
-        <div className="bg-gradient-to-r from-green-600 via-green-500 to-emerald-500 rounded-xl md:rounded-3xl shadow-2xl overflow-hidden">
+        <div className="bg-gradient-to-r from-green-600 via-green-500 to-emerald-500 shadow-2xl overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             {/* Left Side - Content */}
             <div className="p-6 lg:p-16 text-white">

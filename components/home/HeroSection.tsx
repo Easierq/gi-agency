@@ -94,22 +94,6 @@ export default function HeroSection() {
                 Get a Quote
               </Link>
             </div>
-
-            {/* Trust Badges */}
-            {/* <div className="hidden lg:hidden flex-wrap justify-center lg:justify-start gap-8 mt-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-1">500+</div>
-                <p className="text-sm text-green-100">Happy Clients</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-1">1000+</div>
-                <p className="text-sm text-green-100">Projects Done</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-1">4.9★</div>
-                <p className="text-sm text-green-100">Client Rating</p>
-              </div>
-            </div> */}
           </div>
 
           {/* Right Content - Featured Visual */}

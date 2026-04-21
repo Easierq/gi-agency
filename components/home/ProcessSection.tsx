@@ -34,7 +34,7 @@ export default function ProcessSection() {
   ];
 
   return (
-    <section className="py-12 bg-gradient-to-br from-gray-50 to-green-50">
+    <section className="py-12 bg-green-50/40">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">

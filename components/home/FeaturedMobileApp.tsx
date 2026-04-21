@@ -75,9 +75,9 @@ export default function FeaturedMobileApp({ data }: Props) {
         <div className="flex items-center justify-between mb-8">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
+              {/* <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
                 <Smartphone className="w-6 h-6 text-indigo-600" />
-              </div>
+              </div> */}
               <h2 className="hidden md:inline-block text-3xl font-bold text-gray-800">
                 Mobile App Development{" "}
                 <span className="hidden md:inline-block text-purple-600">
@@ -98,10 +98,10 @@ export default function FeaturedMobileApp({ data }: Props) {
 
           <Link
             href="/services/mobile-app-development"
-            className="hidden md:flex items-center text-indigo-600 hover:text-indigo-700 font-semibold"
+            className="group hidden md:flex items-center bg-indigo-600 p-2 px-5 rounded-full text-white font-semibold"
           >
             View All
-            <ArrowRight className="w-5 h-5 ml-1" />
+            <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-all duration-300" />
           </Link>
         </div>
 
@@ -217,10 +217,10 @@ export default function FeaturedMobileApp({ data }: Props) {
         </div>
 
         {/* Mobile View All */}
-        <div className="text-center mt-8 md:hidden">
+        <div className="text-center mt-4 md:hidden">
           <Link
             href="/services/mobile-app-development"
-            className="inline-flex items-center border border-indigo-600 text-indigo-600 hover:text-indigo-700 font-semibold"
+            className="inline-flex items-center border border-indigo-600 px-3 py-2 rounded-full text-indigo-600 hover:text-indigo-700 font-semibold"
           >
             View All Mobile App Projects
             <ArrowRight className="w-5 h-5 ml-1" />
